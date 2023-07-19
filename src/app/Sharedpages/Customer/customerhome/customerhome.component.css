@@ -1,0 +1,112 @@
+.container1 {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  align-items: center;
+}
+
+.container1 .man-img {
+  width: 25%;
+}
+.container1 .man-img img {
+  width: 100%;
+  margin-left: 50%;
+}
+
+.container1 .search-img {
+  width: 20%;
+}
+
+.container1 .search-img img {
+  max-width: 50%;
+  margin-top: -150%;
+  margin-left: 50%;
+}
+
+.container1 .search-box {
+  width: 45%;
+}
+
+
+
+.card {
+  
+  background-color: transparent;
+  color: black;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  /* align-content: center; */
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+.card img{
+  width: 50px;
+  margin-top: 2px;
+  cursor: pointer;
+}
+.cards {
+  background-color: #CAC1C1;
+  padding: 10px;
+  margin: 0 auto;
+  display: grid;
+  border-radius: 5px;
+}
+.search-box {
+  background-color: #5FC7A1;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+input,
+select{
+  width: 60%;
+  border: 1px solid black;
+}
+button{
+  background-color:#CFCACA;
+  border-radius: 5px;
+  border: 1px solid black;
+  margin-left: 10px;
+}
+p{
+  margin-bottom: 0;
+}
+
+@media (min-width: 200px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 5px;
+  }
+}
+
+/* Screen larger than 600px? 2 column */
+@media (min-width: 320px) {
+  .cards {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 5px;
+  }
+}
+
+/* Screen larger than 900px? 3 columns */
+@media (min-width: 500px) {
+  .cards {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .container1 .man-img,
+  .container1 .search-img {
+    display: none;
+  }
+
+  .container1 .search-box {
+    width: 100%;
+    padding: 8px;
+  }
+  .card img{
+    width: 40px;
+  }
+}

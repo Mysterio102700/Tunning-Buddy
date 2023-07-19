@@ -1,0 +1,51 @@
+<app-navbar2></app-navbar2>
+<div class="container1">
+  <div class="man-img">
+    <img src="../../../../assets/Images/service-removebg-preview.png" alt="" />
+  </div>
+  <div class="search-img">
+    <img src="../../../../assets/Images/serach-removebg-preview.png" alt="" />
+  </div>
+  <div class="search-box">
+    <h2>Enter Location</h2>
+    <div class="container2">
+      <div class="" style="display: flex; margin-bottom: 20px">
+        <input
+          class="form-control"
+          type="text"
+          name=""
+          id="inp1"
+          placeholder="Enter Location"
+        />
+        <select class="form-control" style="margin-left: 10px" required>
+          <option hidden value="" disabled selected>Select one option</option>
+          <option value="1">Discharged Battery</option>
+          <option value="2">Car pulling</option>
+          <option value="3">Car towing</option>
+          <option value="4">Uneven tyre wear</option>
+          <option value="5">Engine Overheating</option>
+          <option value="6">Car Paint Fading</option>
+          <option value="7">Low fuel mileage</option>
+          <option value="8">Exhaust Smoke</option>
+          <option value="9">Squealing Brakes</option>
+          <option value="10">Other</option>
+        </select>
+        <div class="" style="display: flex">
+          <button (click)="myfun()">search</button>
+        </div>
+      </div>
+      <div class="container3">
+        <div class="cards">
+          <div class="card" >
+            <img src="https://cdn-icons-png.flaticon.com/128/565/565949.png" alt="" (click)="myfun()" />
+            <p>current</p>
+          </div>
+          <div class="card" *ngFor="let l of Locations">
+            <img [src]="l.image" alt="" (click)="icon(l.loc)" />
+            <p>{{ l.loc }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
